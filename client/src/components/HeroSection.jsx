@@ -2,12 +2,12 @@ import React from 'react'
 
 const HeroSection = () => {
   return (
-    <section className="relative overflow-hidden bg-[#020817] text-gray-300">
+    <section className="relative overflow-hidden">
       
       {/* Background Glow */}
       <div className="absolute left-0 top-0 h-full w-full bg-[radial-gradient(circle_at_top_left,rgba(249,115,22,0.15),transparent_35%)]"></div>
 
-      <div className="relative mx-auto flex max-w-7xl flex-col items-center justify-between gap-16 py-24 lg:flex-row">
+      <div className="relative mx-auto flex max-w-7xl flex-col items-center justify-between gap-16 pt-24 mb-20 lg:flex-row">
         
         {/* Left Content */}
         <div className="max-w-2xl">

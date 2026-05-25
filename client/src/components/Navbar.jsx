@@ -3,7 +3,7 @@ import { useState } from "react";
 const Navbar = () => {
 
   return (
-    <nav className="w-full border-b border-gray-800 bg-[#020817] text-gray-300">
+    <nav className="w-full border-b border-gray-800 bg-[#020817]/50 backdrop-blur-sm text-gray-300 fixed z-50">
       <div className="mx-auto flex max-w-7xl items-center justify-between py-5">
         
         {/* Logo */}
@@ -17,6 +17,9 @@ const Navbar = () => {
 
         {/* Desktop Nav */}
         <div className="hidden items-center gap-10 lg:flex font-semibold">
+          <a href="" className="hover:text-orange-500 transition duration-300">
+            UPSC
+          </a>
           <a href="" className="hover:text-orange-500 transition duration-300">
             UPPCS
           </a>
