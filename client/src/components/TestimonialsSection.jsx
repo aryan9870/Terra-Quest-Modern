@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 
 const testimonials = [
   {
@@ -32,44 +32,34 @@ const testimonials = [
 
 const TestimonialsSection = () => {
   return (
-    <section className="border-t border-white/5 bg-[#0b1120] py-20 px-10">
-      
-      <div className="mx-auto max-w-7xl">
-        
-        {/* Cards */}
-        <div className="grid gap-10 lg:grid-cols-3">
-          
+    <section className="border-t border-white/5 bg-[#0b1120] py-12 sm:py-16 lg:py-20">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
+        <div className="grid grid-cols-1 gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-3 lg:gap-10">
           {testimonials.map((item, index) => (
             <div
               key={index}
-              className="rounded-3xl border border-white/5 bg-[#131c31]/80 p-10 backdrop-blur-md transition duration-300 hover:border-orange-500/20 hover:shadow-xl hover:shadow-orange-500/5"
+              className="rounded-2xl border border-white/5 bg-[#131c31]/80 p-6 backdrop-blur-md transition duration-300 hover:border-orange-500/20 hover:shadow-xl hover:shadow-orange-500/5 sm:rounded-3xl sm:p-8 md:p-10"
             >
-              
-              {/* Title */}
-              <h3 className="mb-6 text-2xl font-semibold text-orange-500">
+              <h3 className="mb-4 text-xl font-semibold text-orange-500 sm:mb-6 sm:text-2xl">
                 {item.title}
               </h3>
 
-              {/* Review */}
-              <p className="mb-8 text-lg italic leading-8">
+              <p className="mb-6 text-base italic leading-7 sm:mb-8 sm:text-lg sm:leading-8">
                 {item.review}
               </p>
 
-              {/* User */}
-              <div className="flex items-center gap-5">
-                
+              <div className="flex items-center gap-4 sm:gap-5">
                 <img
                   src={item.image}
                   alt={item.name}
-                  className="h-16 w-16 rounded-full object-cover"
+                  className="h-12 w-12 shrink-0 rounded-full object-cover sm:h-14 sm:w-14 md:h-16 md:w-16"
                 />
 
-                <div>
-                  <h4 className="text-2xl font-semibold">
+                <div className="min-w-0">
+                  <h4 className="truncate text-lg font-semibold sm:text-xl md:text-2xl">
                     {item.name}
                   </h4>
-
-                  <p className="text-lg text-gray-500">
+                  <p className="text-sm text-gray-500 sm:text-base md:text-lg">
                     {item.role}
                   </p>
                 </div>

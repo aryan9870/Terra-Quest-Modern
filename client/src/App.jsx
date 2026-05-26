@@ -5,7 +5,7 @@ import Footer from "./components/Footer";
 
 const App = () => {
   return (
-    <div className="tracking-wider">
+    <div className="overflow-x-hidden tracking-wider">
       <Navbar />
       <Home />
       <Footer />

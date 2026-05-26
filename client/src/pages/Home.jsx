@@ -7,7 +7,7 @@ import CallToActionSection from "../components/CallToActionSection";
 
 const Home = () => {
   return (
-    <div className="pt-22 bg-[#020817] text-gray-300">
+    <div className="overflow-x-hidden bg-[#020817] pt-16 text-gray-300 sm:pt-20 lg:pt-24">
       <HeroSection />
       <CoursesGrid />
       <WhyChooseSection />
