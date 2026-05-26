@@ -2,7 +2,7 @@ const Footer = () => {
   return (
     <footer className="border-t border-white/10 bg-[#020817] text-white">
       
-      <div className="mx-auto grid max-w-7xl gap-16 py-10 md:grid-cols-2">
+      <div className="mx-auto grid max-w-7xl gap-16 py-10 px-10 md:grid-cols-2">
         
         {/* Left Side */}
         <div>

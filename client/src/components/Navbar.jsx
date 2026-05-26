@@ -4,7 +4,7 @@ const Navbar = () => {
 
   return (
     <nav className="w-full border-b border-gray-800 bg-[#020817]/50 backdrop-blur-sm text-gray-300 fixed z-50">
-      <div className="mx-auto flex max-w-7xl items-center justify-between py-5">
+      <div className="mx-auto flex max-w-7xl items-center justify-between py-5 px-10">
         
         {/* Logo */}
         <div className="flex items-center gap-2 cursor-pointer">

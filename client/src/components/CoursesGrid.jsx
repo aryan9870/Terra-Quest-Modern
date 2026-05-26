@@ -21,7 +21,7 @@ const CoursesGrid = () => {
 
   return (
     <section className="bg-[#020817] mb-20">
-      <div className="mx-auto max-w-7xl">
+      <div className="mx-auto max-w-7xl px-10">
         {/* Heading */}
         <h2 className="mb-16 text-center text-5xl font-semibold">
           UPPCS Prelims 2025 Courses

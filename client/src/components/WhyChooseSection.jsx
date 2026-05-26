@@ -25,7 +25,7 @@ const WhyChooseSection = () => {
   return (
     <section className="bg-[#020817] mb-20">
       
-      <div className="mx-auto max-w-6xl">
+      <div className="mx-auto max-w-7xl px-20">
         
         {/* Heading */}
         <h2 className="mb-20 text-center text-5xl font-semibold">
