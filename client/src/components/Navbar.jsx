@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const navLinks = [
   { label: "UPSC", href: "" },
@@ -9,13 +10,14 @@ const navLinks = [
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const navigate = useNavigate();
 
   return (
     <nav className="fixed z-50 w-full border-b border-gray-800 bg-[#020817]/50 text-gray-300 backdrop-blur-sm">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
         <div className="flex items-center justify-between gap-3 py-3 sm:py-4 lg:py-5">
           {/* Logo */}
-          <div className="flex min-w-0 cursor-pointer items-center gap-1.5 sm:gap-2">
+          <div onClick={() => navigate("/")} className="flex min-w-0 cursor-pointer items-center gap-1.5 sm:gap-2">
             <h1 className="shrink-0 text-2xl font-semibold text-orange-500 sm:text-3xl lg:text-4xl">
               TQ
             </h1>
@@ -38,7 +40,7 @@ const Navbar = () => {
           </div>
 
           {/* Desktop CTA */}
-          <button className="hidden shrink-0 rounded-lg bg-orange-500 px-4 py-2.5 text-sm font-bold uppercase text-white shadow-lg transition duration-300 hover:bg-orange-600 lg:block xl:px-6 xl:py-3 xl:text-lg">
+          <button onClick={() => navigate("/cources")} className="hidden cursor-pointer shrink-0 rounded-lg bg-orange-500 px-4 py-2.5 text-sm font-bold uppercase text-white shadow-lg transition duration-300 hover:bg-orange-600 lg:block xl:px-6 xl:py-3 xl:text-lg">
             Explore Our Courses
           </button>
 
