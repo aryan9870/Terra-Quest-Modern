@@ -7,7 +7,7 @@ const CourseCard = ({course}) => {
             className="bg-[#08142E] cursor-pointer rounded-[30px] overflow-hidden border border-white/10 hover:border-orange-500 transition"
           >
             {/* Thumbnail */}
-            <div className="h-40 bg-gradient-to-r from-orange-500 to-orange-600"></div>
+            <div className="h-50 bg-gradient-to-r from-orange-500 to-orange-600"></div>
 
             {/* Content */}
             <div className="p-5">
