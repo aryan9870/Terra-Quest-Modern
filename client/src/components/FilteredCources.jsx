@@ -3,6 +3,28 @@ import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Box from "@mui/material/Box";
 
+const FILTER_TABS = [
+  "All",
+  "UPSC",
+  "UPPCS",
+  "Prelims",
+  "Mains",
+  "Advance",
+  "PYQs",
+  "Test Series",
+];
+
+const TAB_CONTENT = [
+  "All Courses",
+  "UPSC Courses",
+  "UPPCS Courses",
+  "Prelims Courses",
+  "Mains Courses",
+  "Advance Courses",
+  "PYQs Courses",
+  "Test Series Courses",
+];
+
 export default function FilteredCourses() {
   const [value, setValue] = useState(0);
 
@@ -11,45 +33,50 @@ export default function FilteredCourses() {
   };
 
   return (
-    <div className="w-full mt-10 px-20">
+    <section className="mx-auto mt-6 w-full max-w-7xl px-4 sm:mt-10 sm:px-6 lg:px-10">
       <Box sx={{ width: "100%", bgcolor: "#020817", color: "white" }}>
         <Tabs
-          sx={{}}
           value={value}
           onChange={handleChange}
+          variant="scrollable"
+          scrollButtons="auto"
+          allowScrollButtonsMobile
           sx={{
+            "& .MuiTabs-scrollButtons": {
+              color: "white",
+            },
             "& .MuiTabs-indicator": {
               backgroundColor: "#ff6b00",
             },
             "& .MuiTab-root": {
               color: "white",
+              textTransform: "none",
+              fontSize: {
+                xs: "0.875rem",
+                sm: "1rem",
+                md: "1.25rem",
+                lg: "1.5rem",
+                xl: "2rem",
+              },
+              minWidth: { xs: "auto", sm: 90 },
+              px: { xs: 1.5, sm: 2, md: 3 },
             },
             "& .Mui-selected": {
               color: "#ff6b00 !important",
             },
           }}
         >
-          <Tab sx={{ color: "white", fontSize: "2rem" }} label="All" />
-          <Tab sx={{ color: "white", fontSize: "2rem" }} label="UPSC" />
-          <Tab sx={{ color: "white", fontSize: "2rem" }} label="UPPCS" />
-          <Tab sx={{ color: "white", fontSize: "2rem" }} label="Prelims" />
-          <Tab sx={{ color: "white", fontSize: "2rem" }} label="Mains" />
-          <Tab sx={{ color: "white", fontSize: "2rem" }} label="Advance" />
-          <Tab sx={{ color: "white", fontSize: "2rem" }} label="PYQs" />
-          <Tab sx={{ color: "white", fontSize: "2rem" }} label="Test Series" />
+          {FILTER_TABS.map((label) => (
+            <Tab key={label} label={label} />
+          ))}
         </Tabs>
 
-        <Box sx={{ p: 3 }}>
-          {value === 0 && <h3>All Courses</h3>}
-          {value === 1 && <h3>UPSC Courses</h3>}
-          {value === 2 && <h3>UPPCS Courses</h3>}
-          {value === 3 && <h3>Prelims Courses</h3>}
-          {value === 4 && <h3>Mains Courses</h3>}
-          {value === 5 && <h3>Advance Courses</h3>}
-          {value === 6 && <h3>PYQs Courses</h3>}
-          {value === 7 && <h3>Test Series Courses</h3>}
+        <Box sx={{ p: { xs: 2, sm: 3 } }}>
+          <h3 className="text-lg font-semibold sm:text-xl md:text-2xl">
+            {TAB_CONTENT[value]}
+          </h3>
         </Box>
       </Box>
-    </div>
+    </section>
   );
 }
